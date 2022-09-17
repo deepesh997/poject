@@ -17,7 +17,8 @@
 
     <View
         android:id="@+id/view1"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/view"
         android:layout_height="100dp"
         android:background="@drawable/ic_wave__2"
         />
@@ -26,6 +27,8 @@
         android:id="@+id/imageView"
         android:layout_alignParentRight="true"
         android:layout_width="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
         android:layout_height="58dp"
         app:srcCompat="@drawable/ic_baseline_perm_identity_24" />
 
@@ -34,9 +37,10 @@
         android:layout_width="189dp"
         android:layout_below="@id/imageView"
         android:layout_height="108dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:fontFamily="sans-serif-black"
-        android:text=" Welcome To  Kissan Mitra"
+        android:layout_marginLeft="30dp"
+        android:text="Welcome To  Kissan Mitra"
         android:textColor="#F8F4F4"
         android:textSize="30dp" />
 
@@ -48,7 +52,7 @@
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_baseline_smartphone_24"
         android:drawablePadding="10dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_centerInParent="true"
         android:ems="10"
         android:hint="Phone No"
