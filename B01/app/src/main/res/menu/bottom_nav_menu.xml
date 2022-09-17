@@ -9,7 +9,7 @@
     <item
         android:id="@+id/feedback"
         android:icon="@drawable/ic_baseline_feedback_24"
-        android:title="Feeback" />
+        android:title="Feedback" />
     <item
         android:id="@+id/notifications"
         android:icon="@drawable/ic_baseline_notifications_24"
