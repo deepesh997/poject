@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/B01/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/drawable/ic_baseline_smartphone_24.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/drawable/ic_launcher_background.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/drawable/ic_wave__2.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/drawable/image_border.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/drawable/round_border.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/layout-land/activity_home.xml" value="0.2801801801801802" />
+        <entry key="..\:/B01/app/src/main/res/layout/activity_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/B01/app/src/main/res/layout/activity_jayad.xml" value="0.22826086956521738" />
+        <entry key="..\:/B01/app/src/main/res/layout/activity_jayant.xml" value="0.16197916666666667" />
+        <entry key="..\:/B01/app/src/main/res/layout/activity_kharib.xml" value="0.14635416666666667" />
+        <entry key="..\:/B01/app/src/main/res/layout/activity_main.xml" value="0.16197916666666667" />
+        <entry key="..\:/B01/app/src/main/res/layout/activity_ravi.xml" value="0.16197916666666667" />
+        <entry key="..\:/B01/app/src/main/res/layout/bottom_nav_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/B01/app/src/main/res/layout/fragment_feedback.xml" value="0.22826086956521738" />
+        <entry key="..\:/B01/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/B01/app/src/main/res/layout/fragment_notification.xml" value="0.22826086956521738" />
+        <entry key="..\:/B01/app/src/main/res/layout/fragment_settings.xml" value="0.22826086956521738" />
+        <entry key="..\:/B01/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4921875" />
+        <entry key="..\:/B01/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.171" />
+        <entry key="..\:/B01/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.171" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
