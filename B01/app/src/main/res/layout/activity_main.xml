@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,11 +12,12 @@
         android:layout_width="412dp"
         android:layout_height="33dp"
         android:layout_marginBottom="50dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Presented by fantastic 4"
+        android:fontFamily="serif"
+        android:includeFontPadding="false"
+        android:text="Presented by Tiger"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="@color/browon"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
