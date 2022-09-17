@@ -17,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeFragment extends Fragment {
 
-    public ImageView ravi, kharib, jayat;
+    public ImageView ravi, kharif, jayat;
     @Override
 
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,11 +32,20 @@ public class HomeFragment extends Fragment {
                 Toast.makeText(getActivity(), "loading", Toast.LENGTH_SHORT).show();
             }
         });
-        kharib=view.findViewById(R.id.kharif);
-        kharib.setOnClickListener(new View.OnClickListener() {
+        kharif=view.findViewById(R.id.kharif);
+        kharif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), kharib.class);
+                startActivity(intent);
+                Toast.makeText(getContext(), "loading", Toast.LENGTH_SHORT).show();
+            }
+        });
+        jayat=view.findViewById(R.id.jayat);
+        jayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Jayad.class);
                 startActivity(intent);
                 Toast.makeText(getContext(), "loading", Toast.LENGTH_SHORT).show();
             }

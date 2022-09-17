@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:background="@color/design_blue"
+
+        />
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/view"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_wave__2"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_alignParentRight="true"
+        android:layout_width="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="58dp"
+        app:srcCompat="@drawable/ic_baseline_perm_identity_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Welcome To  Kissan Mitra"
+        android:textColor="#F8F4F4"
+        android:textSize="35dp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="252dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/textView"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_baseline_smartphone_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:hint="Phone No"
+        android:inputType="phone"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btmGenerateOtp"
+        android:layout_width="244dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/phone"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_border"
+        android:backgroundTint="@color/design_blue"
+        android:text="Generate Otp"
+        android:textColor="#FAF4F4" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="252dp"
+        android:layout_height="59dp"
+        android:layout_below="@id/btmGenerateOtp"
+        android:background="@drawable/round_border"
+        android:drawableStart="@drawable/ic_baseline_smartphone_24"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:hint="OTP"
+        android:visibility="invisible"
+        android:inputType="number"
+        android:padding="16dp" />
+    <Button
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="244dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/otp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_border"
+        android:backgroundTint="@color/design_blue"
+        android:text="Verify Otp"
+        android:visibility="invisible"
+        android:textColor="#FAF4F4" />
+
+</RelativeLayout>

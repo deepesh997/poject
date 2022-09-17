@@ -44,19 +44,28 @@
 
     </HorizontalScrollView>
 
+
     <ImageView
         android:id="@+id/ravi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:layout_below="@+id/horizontalScrollView"
         android:src="@drawable/ravi"/>
     <ImageView
         android:id="@+id/kharif"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:layout_below="@+id/ravi"
         android:src="@drawable/kharif"
         />
+        <ImageView
+            android:id="@+id/jayat"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@+id/kharif"
+            android:src="@drawable/jayat"
+            />
+
 
 
 </RelativeLayout>

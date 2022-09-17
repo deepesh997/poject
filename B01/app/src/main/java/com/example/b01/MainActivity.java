@@ -3,12 +3,18 @@ package com.example.b01;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,122 +25,52 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText phone,otp;
-    Button btngenOTP,btnverify;
-    String mVerificationId;
-    FirebaseAuth mAuth;
+
+    ImageView imageView;
+    TextView textView;
+    Timer timer;
+    Animation topanim;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        phone =findViewById(R.id.phone);
-        otp = findViewById(R.id.otp);
-        btngenOTP = findViewById(R.id.btmGenerateOtp);
-        btnverify = findViewById(R.id.btnVerifyOtp);
-        mAuth = FirebaseAuth.getInstance();
-        btngenOTP.setOnClickListener(new View.OnClickListener() {
+        FirebaseMessaging.getInstance().subscribeToTopic("Notification");
+
+
+        imageView = (ImageView) findViewById(R.id.image_view);
+        textView = (TextView) findViewById(R.id.textView7);
+
+        imageView.animate().alpha(0f).setDuration(0);
+        textView.animate().alpha(0f).setDuration(0);
+
+        imageView.animate().alpha(1f).setDuration(1000).setListener(new AnimatorListenerAdapter() {
             @Override
-            public void onClick(View view) {
-
-                otp.setVisibility(view.VISIBLE);
-                btnverify.setVisibility(view.VISIBLE);
-                if(TextUtils.isEmpty(phone.getText().toString()))
-                {
-                    Toast.makeText(MainActivity.this,"Enter Valid Phone no",Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    String number = phone.getText().toString();
-                    sendverificationcode(number);
-                }
-
+            public void onAnimationEnd(Animator animation) {
+                textView.animate().alpha(1f).setDuration(800);
             }
         });
-
-        btnverify.setOnClickListener(new View.OnClickListener() {
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
             @Override
-            public void onClick(View view) {
-
-                if(TextUtils.isEmpty(otp.getText().toString()))
-                {
-                    Toast.makeText(MainActivity.this,"Wrong OTP Enterd",Toast.LENGTH_SHORT).show();
-
-                }
-                else
-                verifycode(otp.getText().toString());
-
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
             }
-        });
+        }, 4000);
     }
-
-    private void sendverificationcode(String phoneNumber) {
-
-        PhoneAuthOptions options =
-                PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+91"+phoneNumber)       // Phone number to verify
-                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                        .setActivity(this)                 // Activity (for callback binding)
-                        .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
-                        .build();
-        PhoneAuthProvider.verifyPhoneNumber(options);
-
-    }
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks
-
-    mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-        @Override
-        public void onVerificationCompleted(PhoneAuthCredential credential) {
-
-
-            final String code = credential.getSmsCode();
-            if(code!=null)
-            {
-                verifycode(code);
-            }
-        }
-
-        @Override
-        public void onVerificationFailed(FirebaseException e) {
-
-            Toast.makeText(MainActivity.this,"Verification failed",Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        public void onCodeSent(@NonNull String verificationId,
-                @NonNull PhoneAuthProvider.ForceResendingToken token) {
-
-            super.onCodeSent(verificationId,token);
-            mVerificationId = verificationId;
-        }
-    };
-
-    private void verifycode(String Code) {
-        PhoneAuthCredential credential=PhoneAuthProvider.getCredential(mVerificationId,Code);
-        signinCredentials(credential);
-
-    }
-
-    private void signinCredentials(PhoneAuthCredential credential) {
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        firebaseAuth.signInWithCredential(credential)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful())
-                        {
-                            Toast.makeText(MainActivity.this,"Login Successfully",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(MainActivity.this, HomeActivity.class));
-                        }
-                    }
-                });
-    }
-
 }
 
 
