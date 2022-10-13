@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "771822207540",
+    "firebase_url": "https://kishanmitra-1bb6b-default-rtdb.firebaseio.com",
     "project_id": "kishanmitra-1bb6b",
     "storage_bucket": "kishanmitra-1bb6b.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "771822207540-lejfna2pgmj4utf7q6r7b2hsqgkjdc0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.b01",
+            "certificate_hash": "22fb8727a3f9dcc98a8b233cd41ba036ae4ff762"
+          }
+        },
         {
           "client_id": "771822207540-raehd0b7q0n2lugue0tcu5pk1k53ni62.apps.googleusercontent.com",
           "client_type": 3

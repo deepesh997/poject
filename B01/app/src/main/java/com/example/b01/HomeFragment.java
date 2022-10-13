@@ -29,7 +29,6 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ravi.class);
                 startActivity(intent);
-                Toast.makeText(getActivity(), "loading", Toast.LENGTH_SHORT).show();
             }
         });
         kharif=view.findViewById(R.id.kharif);
@@ -38,7 +37,6 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), kharib.class);
                 startActivity(intent);
-                Toast.makeText(getContext(), "loading", Toast.LENGTH_SHORT).show();
             }
         });
         jayat=view.findViewById(R.id.jayat);
@@ -47,7 +45,6 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Jayad.class);
                 startActivity(intent);
-                Toast.makeText(getContext(), "loading", Toast.LENGTH_SHORT).show();
             }
         });
 
